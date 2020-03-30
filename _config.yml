@@ -1,1 +1,10 @@
+title: Apple vs. Apples
+email: nilshindermann@gmail.com
+description: >-
+  A game developed by Nils H.
+baseurl: "AppleVsApples"
+
+markdown: kramdown
 theme: jekyll-theme-slate
+plugins:
+  - jekyll-feed
