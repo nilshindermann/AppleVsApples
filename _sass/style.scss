@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$table-text-align: left !default;
+
+$background-color: green !default;
+$brand-color-dark: blue !default;
+$brand-color-light: lightblue !default;
+$text-color: white !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+.site-title {
+  color: $text-color;
+  line-height: $base-line-height;
+}
+
+.site-nav {
+  position: absolute;
+  top: 9px;
+  right: $spacing-unit / 2;
+  background-color: $background-color;
+  border: 1px solid $brand-color-light;
+  border-radius: 5px;
+  text-align: right;
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+
+    > svg path {
+      fill: $brand-color-dark;
+    }
+  }
+
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+
+  input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+    display: block;
+    padding: 5px 10px;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: $on-medium) {
+    position: static;
+    float: right;
+    border: none;
+    background-color: inherit;
+
+    label[for="nav-trigger"] {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    input ~ .trigger {
+      display: block;
+    }
+
+    .page-link {
+      display: inline;
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      margin-left: auto;
+    }
+  }
+}
