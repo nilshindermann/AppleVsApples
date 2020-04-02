@@ -2,8 +2,8 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: default
 ---
 
 Dies ist die offizielle Webseite von Apple vs. Apples.
-Hier kann man das Spiel herunterladen.
+[Hier]({{"/downloads/" | relative_url}}) kann man das Spiel herunterladen.
